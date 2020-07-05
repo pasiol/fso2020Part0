@@ -1,0 +1,18 @@
+title Single Page App
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+palvelin->selain: HTML-asiakirja
+selain->palvelin: HTTP GET ttps://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: CSS-tiedosto
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+palvelin->selain: JavaScript-tiedosto
+note over selain:
+Selain suorittaa JavaScriptin,
+joka pyytää palvelimelta muistiinpanoja JSON-muodossa.
+end note:
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin->selain: JSON-tiedosto
+note over selain:
+Selain suorittaa tapahtumankäsittelijän,
+joka renderöi JSON-datan content-elementit HTML-listaksi.
+end note:

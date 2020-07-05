@@ -1,0 +1,10 @@
+title Single Page App uusi muistiinpano
+
+käyttäjä->selain: Kirjoittaa uuden muistiinpanon ja painaa tallenna painiketta
+note over selain:
+Selain suorittaa tapahtumankäsittelijän,
+joka lisää uuden muistiinpano DOM:in kautta listaan.
+Selain renderöi listan uudelleen ja lähetää lisätyn
+muistiinpanon palvelimelle.
+end note:
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
